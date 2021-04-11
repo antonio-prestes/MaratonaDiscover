@@ -73,7 +73,7 @@ module.exports = {
             "daily-hours": req.body["daily-hours"],
         }
 
-        Job.data = Job.data.map(job => {
+        const newJobs = jobs.map(job => {
             if (Number(job.id) === Number(jobId)) {
                 job = updatedJob
             }
@@ -81,13 +81,13 @@ module.exports = {
             return job
         })
 
+        Job.update(newJobs)
         res.redirect('/job/' + jobId)
     },
 
     delete(req, res) {
         const jobId = req.params.id
-
-        Job.data = Job.data.filter(job => Number(job.id) !== Number(jobId))
+        Job.delete(jobId)
 
         return res.redirect('/')
     }
