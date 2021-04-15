@@ -2,5 +2,8 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/db/init.js" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/model/Job.js" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/model/Profile.js" dialect="SQLite" />
+    <file url="PROJECT" dialect="SQLite" />
   </component>
 </project>
